@@ -6,7 +6,7 @@ class Point {
 public:
 	int x;
 	int y;
-	static int count;
+	static int count; // статический филд для всего класса в единственном экземпляре
 
 	Point() {
 		x = 0;
@@ -26,4 +26,6 @@ int main() {
 	cout << point.x << endl;
 	cout << point.y << endl;
 	cout << point.count << endl;
+
+	cout << Point::count << endl;
 }
