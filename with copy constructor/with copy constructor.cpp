@@ -1,11 +1,11 @@
 #include<iostream>
-#include"DynamicArray.h"
+#include"dynamic_array.h"
 
 using namespace std;
 
 int main() {
 
-	DynamicArray array1{25};
+	DynamicArray array1{ 25 };
 	array1.randomize();
 	array1.show();
 
