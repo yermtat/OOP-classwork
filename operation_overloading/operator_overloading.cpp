@@ -34,9 +34,16 @@ int main() {
 	Point p1{ 0, 0 };
 	Point p2{ 1, 1 };
 
-	Point p3 = ++p1 + p2;
+	/*Point p3 = ++p1 + p2;
 	p3.show();
 	p3 = p1++ + p2;
-	p3.show();
+	p3.show();*/
+
+	/*cout << boolalpha << (p1 == p2) << endl;
+	cout << boolalpha << (p1 != p2) << endl;
+	cout << boolalpha << (p1 < p2) << endl;*/
+
+	cout << p1 << endl;
+
 	
 }

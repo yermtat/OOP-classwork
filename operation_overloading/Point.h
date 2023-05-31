@@ -1,4 +1,9 @@
 #pragma once
+#include<conio.h>
+#include<iostream>
+
+using namespace std;
+
 class Point
 {
 private:
@@ -18,6 +23,14 @@ public:
 	/*static Point add(const Point& point1, const Point& point2) {
 		return Point(point1.x + point2.x, point1.y + point2.y);
 	}*/
+
+	static double distance(const Point& left, const Point& right) {
+		return sqrt((left.x - right.x) * (left.x - right.x) + (left.y - right.y) * (left.y - right.y));
+	}
+
+	static double length(const Point& point) {
+		return distance(point, Point());
+	}
 
 	// из-за того что х и у прайвет пришлось писать в классе
 	friend Point operator+(const Point& left, const Point& right) {
@@ -68,5 +81,39 @@ public:
 		return point;
 	}
 	
+
+	friend bool operator==(const Point& left, const Point& right) {
+		return left.x == right.x && left.y == right.y;
+	}
+
+	friend bool operator!=(const Point& left, const Point& right) {
+		return !(left.x == right.x && left.y == right.y);
+	}
+
+	friend bool operator>(const Point& left, const Point& right) {
+		return length(left) > length(right);
+
+	}
+
+	friend bool operator<(const Point& left, const Point& right) {
+		return length(left) < length(right);
+
+	}
+
+	friend ostream& operator<<(ostream& output, const Point& point) {
+		output << "(" << point.x << ", " << point.y << ")";
+		return output;
+	}
+
+	friend istream& operator>>(istream& input, Point& point) {
+		input >> point.x;
+		input.ignore(1);
+		input >> point.y;
+		return input;
+	}
+
+	double operator!() {
+		return distance(*this, Point());
+	}
 };
 

@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "with copy constructor", "wi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "operator_overloading", "operation_overloading\operation_overloading.vcxproj", "{4AAFAACB-DCBA-4B42-91EC-B998A404CCB6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class task", "class task\class task.vcxproj", "{257F5434-0CE8-4BC8-BD37-294A675A1FD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{4AAFAACB-DCBA-4B42-91EC-B998A404CCB6}.Release|x64.Build.0 = Release|x64
 		{4AAFAACB-DCBA-4B42-91EC-B998A404CCB6}.Release|x86.ActiveCfg = Release|Win32
 		{4AAFAACB-DCBA-4B42-91EC-B998A404CCB6}.Release|x86.Build.0 = Release|Win32
+		{257F5434-0CE8-4BC8-BD37-294A675A1FD8}.Debug|x64.ActiveCfg = Debug|x64
+		{257F5434-0CE8-4BC8-BD37-294A675A1FD8}.Debug|x64.Build.0 = Debug|x64
+		{257F5434-0CE8-4BC8-BD37-294A675A1FD8}.Debug|x86.ActiveCfg = Debug|Win32
+		{257F5434-0CE8-4BC8-BD37-294A675A1FD8}.Debug|x86.Build.0 = Debug|Win32
+		{257F5434-0CE8-4BC8-BD37-294A675A1FD8}.Release|x64.ActiveCfg = Release|x64
+		{257F5434-0CE8-4BC8-BD37-294A675A1FD8}.Release|x64.Build.0 = Release|x64
+		{257F5434-0CE8-4BC8-BD37-294A675A1FD8}.Release|x86.ActiveCfg = Release|Win32
+		{257F5434-0CE8-4BC8-BD37-294A675A1FD8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
