@@ -86,7 +86,7 @@ Node<T>* LinkedList<T>::addAfter(const T& value, Node<T>* afterPtr)
 {
 	if (afterPtr == nullptr) return nullptr;
 
-	Node<T> nodePtr = new Node<T>(value);
+	Node<T>* nodePtr = new Node<T>(value);
 	nodePtr->next = afterPtr->next;
 	afterPtr->next = nodePtr;
 	return afterPtr->next;
