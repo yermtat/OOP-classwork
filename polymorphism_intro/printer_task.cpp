@@ -1,12 +1,15 @@
 #include<iostream>
 
 using namespace std;
+//род класс принтер, основной метод принт (должен уметь печатать, должен принимать какой-то текст, показывать имя принтера, напечатавшего текст
+	// должен быть указан тип принтера 
+	// должна быть фукция которая принимает принтер и по-разному принтовать
+
 
 class Printer {
 
 	
 public:
-	int qt;
 	virtual void print(string page) {
 		cout << "printed page: " << endl;
 		cout << page << endl;
