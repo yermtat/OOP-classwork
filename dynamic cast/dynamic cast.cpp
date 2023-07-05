@@ -1,4 +1,5 @@
 #include<iostream>
+#include<typeinfo>
 
 using namespace std;
 
@@ -46,8 +47,28 @@ void someFunc(Animal* animal) {
 	animal->Sound();
 	//Cat& cat = (Cat&)animal;
 
-	Cat* cat = dynamic_cast<Cat*> (animal); // проверяет возможно ли преобразование и если нет возвращает нулл 
+	Cat* cat = dynamic_cast<Cat*> (animal); // проверяет возможно ли преобразование и если нет возвращает нулл. используем его а не статик каст т.к. тут может быть не только кэт
 	if (cat != nullptr) cat->FooCat();
+	Dog* dog = dynamic_cast<Dog*> (animal); 
+	if (dog != nullptr) dog->FooDog();
+	CheshireCat* che = dynamic_cast<CheshireCat*> (animal); 
+	if (che != nullptr) che->fooCheshireCat();
+
+}
+
+void someFuncTypeId(Animal* animal) {
+	animal->Sound();
+	const type_info& type = typeid(*animal);
+	if (type == typeid(Cat)) {
+		static_cast<Cat*>(animal)->FooCat();
+	}
+	if (type == typeid(Dog)) {
+		static_cast<Dog*>(animal)->FooDog();
+	}
+	if (type == typeid(CheshireCat)) {
+		static_cast<CheshireCat*>(animal)->fooCheshireCat();
+	}
+
 }
 
 void someFuncRef(Animal& animal) {
@@ -73,6 +94,10 @@ int main() {
 	someFunc(&cheCat);
 	someFunc(&animal);*/
 
-	someFuncRef(dog);
+	//someFuncRef(dog);
+
+	someFuncTypeId(&cat);
+	someFuncTypeId(&dog);
+	someFuncTypeId(&cheCat);
 
 }
