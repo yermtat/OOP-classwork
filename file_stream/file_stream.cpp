@@ -33,7 +33,7 @@ int main() {
 			ate			= 0x04		// set pointer to end of file
 			app			= 0x08		// append data to end of file
 			trunc		= 0x10		// truncate file size to 0 (усечь размер файла до 0)
-			_Nocreate	= 0x40		// if file not found, file open error
+			_Nocreate	= 0x40		// if file not found, file open error (если нет файла он его не создает)
 			_Noreplace	= 0x80		// if file found, file open error
 			binary		= 0x20		// open file for binary
 

@@ -48,7 +48,7 @@ void main() {
 			}
 			for (; j < NUMB_COLS; j++)
 			{
-				cout << "        ";
+				cout << "   ";
 			}
 			cout << "\t";
 
