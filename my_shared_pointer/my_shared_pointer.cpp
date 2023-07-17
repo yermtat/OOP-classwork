@@ -126,6 +126,10 @@ int main() {
 	shared_ptr<ForShared> sp1(shared);
 	weak_ptr<ForShared> wp(sp1);
 	cout << wp.use_count() << endl;
+	weak_ptr<ForShared> wp1(wp);
+	cout << wp1.use_count() << endl;  // weak ptr не владеет объектом 
+	((shared_ptr<ForShared>)wp1)->Foo(); // чтобы получить инфу об объекте придется тайпкайстить
+
 
 
 
