@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Constructor, Destructor.cpp">
+    <ClCompile Include="initializtion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

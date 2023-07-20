@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9ccbf206-7d93-4d7f-a05c-608a1456c82e}</ProjectGuid>
-    <RootNamespace>OOPIntro</RootNamespace>
+    <ProjectGuid>{7a8f7470-5833-41c6-8102-1ad601119cf4}</ProjectGuid>
+    <RootNamespace>staticfield</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Intro.cpp" />
-    <ClCompile Include="Teacher.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Teacher.h" />
+    <ClCompile Include="static fields and methods.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
